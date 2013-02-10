@@ -8,9 +8,9 @@ import twitter4j.conf.ConfigurationBuilder
  * User: Karno
  * Date: 13/02/10
  * Time: 0:50
- * To change this template use File | Settings | File Templates.
  */
-class FavoriteWatcher(token: String, tokenSecret: String, onFavorite: => Unit) {
+class FavoriteWatcher(id: Long, token: String, tokenSecret: String,
+                      favoriteHandler: () => Unit, unfavoriteHandler: () => Unit, retweetHandler: () => Unit) {
   var _watching = false
   var _stream: TwitterStream = null
 
@@ -27,13 +27,24 @@ class FavoriteWatcher(token: String, tokenSecret: String, onFavorite: => Unit) {
     builder.setOAuthConsumerSecret(FavEx.CONSUMER_SECRET)
     builder.setOAuthAccessToken(token)
     builder.setOAuthAccessTokenSecret(tokenSecret)
-    builder.setUserStreamBaseURL("https://userstream.twitter.com/1.1/user.json")
+    builder.setUserStreamBaseURL("https://userstream.twitter.com/1.1/")
     val conf = builder.build()
     val factory = new TwitterStreamFactory(conf)
     _stream = factory.getInstance()
     _stream.addListener(new UserStreamAdapter {
       override def onFavorite(source: User, target: User, favoritedStatus: Status) {
-        handleFavorite()
+        if (source.getId == target.getId) return
+        favoriteHandler()
+      }
+
+      override def onUnfavorite(source: User, target: User, unfavoritedStatus: Status) {
+        if (source.getId == target.getId) return
+        unfavoriteHandler()
+      }
+
+      override def onStatus(status: Status) {
+        if (!status.isRetweet || !(status.getRetweetedStatus.getUser.getId == id)) return
+        retweetHandler()
       }
     })
     _stream.addConnectionLifeCycleListener(new ConnectionLifeCycleListener {
@@ -48,14 +59,9 @@ class FavoriteWatcher(token: String, tokenSecret: String, onFavorite: => Unit) {
           Thread.sleep(5000)
           tryConnect()
         }
-
       }
     })
     _stream.user()
-  }
-
-  def handleFavorite() {
-    onFavorite
   }
 
   def stopWatch() {

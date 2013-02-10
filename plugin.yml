@@ -1,3 +1,11 @@
-name: com.troidworks.bukkit.favEx.FavEx
-main: com.troidworks.bukkit.com.troidworks.bukkit.favEx.FavEx
+name: FavEx
+main: com.troidworks.bukkit.favEx.FavEx
 version: 0.1
+commands:
+  favex:
+    description: Authorize or deauthorize you.
+    usage: |
+      /<command> [auth, reauth, deauth]
+      Example: /<command> auth - authorize you and start watching you be favorited.
+      Example: /<command> reauth - update your authorization info. (you can use as alias of auth.)
+      Example: /<command> deauth - forgot your authorize info and no longer favorite gives you exps.

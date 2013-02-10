@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="FavEx">
+    <output-path>$PROJECT_DIR$/out/artifacts/</output-path>
+    <root id="archive" name="FavEx.jar">
+      <element id="module-output" name="ScalaPluginExtension" />
+      <element id="module-output" name="FavEx" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/META-INF/MANIFEST.MF" />
+      </element>
+      <element id="file-copy" path="$PROJECT_DIR$/plugin.yml" />
+      <element id="file-copy" path="$PROJECT_DIR$/config.yml" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/twitter4j-core-3.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/twitter4j-stream-3.0.3.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/scala-library.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

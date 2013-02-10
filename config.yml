@@ -1,1 +1,3 @@
-rate: 5
+exp_per_favorite: 5
+exp_per_unfavorite: -5
+exp_per_retweet: 0

@@ -1,6 +1,7 @@
-package com.troidworks.bukkit.favEx.playerLookup;
+package com.troidworks.bukkit.favEx.scalaPluginExtension;
 
 import org.bukkit.entity.Player;
+import org.bukkit.event.Listener;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -10,7 +11,7 @@ import org.bukkit.plugin.java.JavaPlugin;
  * Time: 1:09
  * To change this template use File | Settings | File Templates.
  */
-public final class PlayerLookup {
+public final class ScalaPluginExtension {
     public static Player lookupPlayerFromServer(JavaPlugin plugin, String name) {
         return lookupPlayerFromServer(plugin, name, false);
     }
@@ -20,5 +21,9 @@ public final class PlayerLookup {
             return plugin.getServer().getPlayerExact(name);
         else
             return plugin.getServer().getPlayer(name);
+    }
+
+    public static void registerListener(JavaPlugin plugin, Listener listener) {
+        plugin.getServer().getPluginManager().registerEvents(listener, plugin);
     }
 }

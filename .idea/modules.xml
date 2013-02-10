@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/FavEx.iml" filepath="$PROJECT_DIR$/FavEx.iml" />
-      <module fileurl="file://$PROJECT_DIR$/PlayerLookup/PlayerLookup.iml" filepath="$PROJECT_DIR$/PlayerLookup/PlayerLookup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ScalaPluginExtension/ScalaPluginExtension.iml" filepath="$PROJECT_DIR$/ScalaPluginExtension/ScalaPluginExtension.iml" />
     </modules>
   </component>
 </project>

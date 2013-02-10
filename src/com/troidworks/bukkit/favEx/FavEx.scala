@@ -1,10 +1,11 @@
 package com.troidworks.bukkit.favEx
 
 import org.bukkit.plugin.java.JavaPlugin
-import playerLookup.PlayerLookup
+import scalaPluginExtension.ScalaPluginExtension
 import scala.collection.mutable
 import org.bukkit.ChatColor
 import org.bukkit.command.{Command, CommandSender}
+import java.util
 
 /**
  * Created with IntelliJ IDEA.
@@ -15,16 +16,18 @@ import org.bukkit.command.{Command, CommandSender}
  */
 class FavEx extends JavaPlugin {
   var watchers = new mutable.HashMap[String, FavoriteWatcher]
-  var tokens = new mutable.HashMap[String, String]()
 
   override def onEnable() {
+    this.saveDefaultConfig()
     FavEx._instance = this;
     super.onEnable()
     FavEx.writeLog("Activated FavEx.")
+    ScalaPluginExtension.registerListener(this, new EventHandlers(this));
   }
 
   override def onDisable() {
     super.onDisable()
+    this.saveConfig()
   }
 
   override def onCommand(sender: CommandSender, command: Command,
@@ -32,78 +35,88 @@ class FavEx extends JavaPlugin {
     command.getName.toLowerCase match {
       case "favex" =>
         processCommand(sender, args)
-        true
-
       case _ =>
         false
     }
   }
 
-  def processCommand(sender: CommandSender, args: Array[String]) {
+  def processCommand(sender: CommandSender, args: Array[String]): Boolean = {
     args.size match {
       case 2 =>
         List(args(0), args(1)) match {
-          case List("auth", pin) => updateAuthInfo(sender, pin)
-          case _ => printUsage(sender)
+          case List("auth", pin) => finishAuth(sender, pin); true
+          case _ => false
         }
       case 1 =>
         args(0).toLowerCase match {
-          case "auth" | "reauth" => auth(sender)
-          case "deauth" => deauthorize(sender)
-          case "help" | _ => printUsage(sender)
+          case "auth" | "reauth" => startAuth(sender); true
+          case "deauth" => deauthorize(sender); true
+          case _ => false
         }
-      case _ => printUsage(sender)
+      case _ => false
     }
   }
 
   def startWatching(player: String) {
     stopWatching(player)
     val list = getConfig.getStringList(player);
-    if (list == null || list.size != 2) return;
-    val watcher = new FavoriteWatcher(list.get(0), list.get(1),
-      () => onFavorited(player));
+    if (list == null || list.size != 3) return;
+    val watcher = new FavoriteWatcher(list.get(0).toLong, list.get(1), list.get(2),
+      () => onFavorited(player), () => onUnfavorited(player), () => onRetweeted(player));
     watchers.put(player, watcher)
     watcher.startWatch()
-    PlayerLookup.lookupPlayerFromServer(this, player).sendMessage(ChatColor.GREEN + "FavEx: Started.")
+    ScalaPluginExtension.lookupPlayerFromServer(this, player).sendMessage(ChatColor.GREEN + "FavEx: Started.")
   }
 
   def onFavorited(player: String) {
+    giveExp(player, "exp_per_favorite")
+  }
 
+  def onUnfavorited(player: String) {
+    giveExp(player, "exp_per_unfavorite")
+  }
+
+  def onRetweeted(player: String) {
+    giveExp(player, "exp_per_retweet")
+  }
+
+  def giveExp(player: String, key: String) {
+    ScalaPluginExtension.lookupPlayerFromServer(this, player).giveExp(getConfig.getInt(key))
   }
 
   def stopWatching(player: String) {
-    val watcher = watchers.get(player)
-    if (watcher.isEmpty) return;
-    watcher.get.stopWatch();
-    watchers.remove(player)
-    PlayerLookup.lookupPlayerFromServer(this, player).sendMessage(ChatColor.GREEN + "FavEx: Stopped.")
+    watchers.get(player) match {
+      case Some(watcher) =>
+        watcher.stopWatch()
+        watchers.remove(player)
+        ScalaPluginExtension.lookupPlayerFromServer(this, player).sendMessage(ChatColor.GREEN + "FavEx: Stopped.")
+      case None => Unit
+    }
   }
 
-  private def auth(sender: CommandSender) {
-    startWatching(sender.getName)
+  private def startAuth(sender: CommandSender) {
+    Authorizer.startAuthorize(sender)
   }
 
-  private def updateAuthInfo(sender: CommandSender, pin: String) {
-
+  private def finishAuth(sender: CommandSender, pin: String) {
+    Authorizer.finishAuthorize(sender, pin) match {
+      case Some(token) =>
+        val save = new util.ArrayList[String]()
+        save.add(token.getUserId.toString)
+        save.add(token.getToken)
+        save.add(token.getTokenSecret)
+        getConfig.set(sender.getName, save)
+        sender.sendMessage(ChatColor.GREEN + "Successfully authorized as " + ChatColor.BLUE + "@" + token.getScreenName)
+        startWatching(sender.getName)
+      case None =>
+        sender.sendMessage(ChatColor.RED + "Please try again.")
+    }
   }
 
   private def deauthorize(sender: CommandSender) {
     stopWatching(sender.getName)
     getConfig.set(sender.getName, null)
     sender.sendMessage(ChatColor.RED + "deauthorized.")
-  }
-
-  private def printUsage(sender: CommandSender) {
-    sender.sendMessage(
-      Array(
-        ChatColor.GREEN + "HOW TO USE FavEx:",
-        ChatColor.BLUE + "/favex auth" +
-          ChatColor.WHITE + ": authorize you and start watching favorites.",
-        ChatColor.BLUE + "/favex deauth" +
-          ChatColor.WHITE + ": remove your authorize.",
-        ChatColor.BLUE + "/favex reauth" +
-          ChatColor.WHITE + ": update your authorize information."
-      ))
   }
 }
 

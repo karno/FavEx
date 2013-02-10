@@ -1,0 +1,2 @@
+rule scala.** com.troidworks.bukkit.favEx.lib.scala.@1
+rule twitter4j.** com.troidworks.bukkit.favEx.lib.twitter4j.@1
