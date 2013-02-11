@@ -63,10 +63,16 @@ class FavEx extends JavaPlugin {
     val list = getConfig.getStringList(name)
     if (list == null || list.size != 3) return
     val watcher = new FavoriteWatcher(list.get(0).toLong, list.get(1), list.get(2),
-      () => onFavorited(name), () => onUnfavorited(name), () => onRetweeted(name))
-    watchers.put(name, watcher)
-    watcher.startWatch()
-    player.sendMessage(ChatColor.YELLOW + "FavEx: Started stargazing!")
+      () => onFavorited(name), () => onUnfavorited(name), () => onRetweeted(name),
+      s => notifyUser(name, s))
+    if (watchers.exists(t => t._2.userId == watcher.userId)) {
+      player.sendMessage(ChatColor.RED + "FavEx: Your account is already authenticated and connected by other user.")
+    }
+    else {
+      watchers.put(name, watcher)
+      watcher.startWatch()
+      player.sendMessage(ChatColor.YELLOW + "FavEx: Started stargazing!")
+    }
   }
 
   def onFavorited(player: String) {
@@ -84,7 +90,14 @@ class FavEx extends JavaPlugin {
   def giveExp(player: String, key: String) {
     lookupUser(player) match {
       case None => FavEx.writeLog("not found player " + player)
-      case Some(player) => player.giveExp(getConfig.getInt(key))
+      case Some(p) => p.giveExp(getConfig.getInt(key))
+    }
+  }
+
+  def notifyUser(player: String, msg: String) {
+    lookupUser(player) match {
+      case None => FavEx.writeLog("player " + player + " not found. message: " + msg)
+      case Some(p) => p.sendMessage(msg)
     }
   }
 
@@ -92,8 +105,8 @@ class FavEx extends JavaPlugin {
     val name = player.getName
     watchers.get(name) match {
       case Some(watcher) =>
-        watcher.stopWatch()
         watchers.remove(name)
+        watcher.stopWatch()
         player.sendMessage(ChatColor.GRAY + "FavEx: Stopped observing.")
       case None => Unit
     }
