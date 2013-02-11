@@ -1,7 +1,7 @@
 package com.troidworks.bukkit.favEx
 
 import org.bukkit.event.{EventHandler, EventPriority, Listener}
-import org.bukkit.event.player.{PlayerLoginEvent, PlayerQuitEvent}
+import org.bukkit.event.player.{PlayerJoinEvent, PlayerQuitEvent}
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,12 +12,12 @@ import org.bukkit.event.player.{PlayerLoginEvent, PlayerQuitEvent}
  */
 class EventHandlers(plugin: FavEx) extends Listener {
   @EventHandler(priority = EventPriority.HIGH)
-  def onPlayerLogin(e: PlayerLoginEvent) {
-    plugin.startWatching(e.getPlayer.getName)
+  def onPlayerLogin(e: PlayerJoinEvent) {
+    plugin.startWatching(e.getPlayer)
   }
 
   @EventHandler(priority = EventPriority.HIGH)
   def onPlayerLogout(e: PlayerQuitEvent) {
-    plugin.stopWatching(e.getPlayer.getName)
+    plugin.stopWatching(e.getPlayer)
   }
 }

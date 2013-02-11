@@ -33,7 +33,7 @@ object Authorizer {
           tokens.put(sender.getName, token)
           sender.sendMessage(Array(ChatColor.YELLOW + "Open the following URL and grant access to your account.",
             "Click THIS -> " + ChatColor.BLUE + ShortenUrl(token.getAuthorizationURL),
-            "And type command " + ChatColor.YELLOW + "/favex auth [PIN]" + ChatColor.WHITE + " ."))
+            "And enter command " + ChatColor.YELLOW + "/favex auth [PIN]" + ChatColor.WHITE + " ."))
         } catch {
           case ex: TwitterException =>
             sender.sendMessage(ChatColor.RED + "Twitter returns error: " +
@@ -80,9 +80,12 @@ object Authorizer {
           case ex: Exception =>
             sender.sendMessage(ChatColor.RED + "Exception has occured: " + ex.getMessage)
         }
+        sender.sendMessage(ChatColor.RED + "Please try again a few seconds later.")
         None
       case None =>
-        sender.sendMessage("Your authorization token is not found. Please try again from the start.")
+        sender.sendMessage(Array(
+          ChatColor.RED + "Your authorization token is not found.",
+          ChatColor.RED + "Please try again from the start."))
         None
     }
   }

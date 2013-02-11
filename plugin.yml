@@ -1,6 +1,6 @@
 name: FavEx
 main: com.troidworks.bukkit.favEx.FavEx
-version: 0.1
+version: 0.2
 commands:
   favex:
     description: Authorize or deauthorize you.

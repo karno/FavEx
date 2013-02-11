@@ -9,11 +9,11 @@
     <list default="true" id="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" name="Default" comment="" />
     <ignored path="FavEx.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/FavEx.scala" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360532018515" ignored="false" />
-    <file path="/EventHandlers.scala" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360424967750" ignored="false" />
+    <file path="/FavEx.scala" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360574618451" ignored="false" />
+    <file path="/EventHandlers.scala" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360574703735" ignored="false" />
     <file path="/FavoriteWatcher.scala" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360529004180" ignored="false" />
     <file path="/PlayerLookup.java" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360523126933" ignored="false" />
-    <file path="/Authorizer.scala" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360534315942" ignored="false" />
+    <file path="/Authorizer.scala" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360574858906" ignored="false" />
     <file path="/a.dummy" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360522327937" ignored="false" />
     <file path="/build.xml" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360514064279" ignored="false" />
     <file path="/plugin.yml" changelist="21fb7cfd-a3b8-4447-bc48-c9b264d4ec7b" time="1360516841726" ignored="false" />
@@ -81,10 +81,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="FavEx.scala" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FavEx.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/FavEx.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="115" column="49" selection-start="3523" selection-end="3523" vertical-scroll-proportion="0.0">
+            <state line="3" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="0.05344418">
               <folding />
             </state>
           </provider>
@@ -93,19 +93,17 @@
       <file leaf-file-name="FavoriteWatcher.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/FavoriteWatcher.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="70" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
+            <state line="21" column="2" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Authorizer.scala" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Authorizer.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/Authorizer.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="56" column="36" selection-start="2116" selection-end="2116" vertical-scroll-proportion="0.5522388">
-              <folding>
-                <element signature="e#37#62#0" expanded="true" />
-              </folding>
+            <state line="33" column="21" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -113,7 +111,7 @@
       <file leaf-file-name="plugin.yml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/plugin.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="61" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+            <state line="3" column="8" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -122,7 +120,7 @@
       <file leaf-file-name="EventHandlers.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/EventHandlers.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="19" column="33" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
+            <state line="13" column="45" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -138,22 +136,20 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/EventHandlers.scala" />
         <option value="$PROJECT_DIR$/build.xml" />
-        <option value="$PROJECT_DIR$/plugin.yml" />
         <option value="$PROJECT_DIR$/PlayerLookup/src/com/troidworks/bukkit/favEx/playerLookup/PlayerLookup.java" />
         <option value="$PROJECT_DIR$/config.yml" />
         <option value="$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/FavoriteWatcher.scala" />
+        <option value="$PROJECT_DIR$/plugin.yml" />
         <option value="$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/FavEx.scala" />
+        <option value="$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/EventHandlers.scala" />
         <option value="$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/Authorizer.scala" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+    <option name="width" value="960" />
+    <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -292,8 +288,8 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="GenerateAntBuildDialog.backupFiles" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -313,6 +309,19 @@
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -341,19 +350,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -426,13 +422,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="0" y="0" width="960" height="1040" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284091" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.6707589" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -441,13 +437,13 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3284091" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.32995737" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16577825" sideWeight="0.6707589" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24333334" sideWeight="0.6715909" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -515,51 +511,9 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/Authorizer.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="25" selection-start="1229" selection-end="1229" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#37#62#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/FavEx.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="18" selection-start="691" selection-end="691" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/FavoriteWatcher.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="46" selection-start="996" selection-end="996" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/EventHandlers.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="4" selection-start="609" selection-end="609" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/bukkit-1.4.7-R1.1-20130206.060129-4.jar!/org/bukkit/plugin/java/JavaPlugin.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="32" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.46818727" />
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/bukkit-1.4.7-R1.1-20130206.060129-4.jar!/org/bukkit/Server.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="828" selection-end="828" vertical-scroll-proportion="0.6205674" />
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files (x86)/scala/src/scala-library-src.jar!/scala/Predef.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="277" column="8" selection-start="13387" selection-end="13387" vertical-scroll-proportion="0.31585082">
-          <folding />
-        </state>
+        <state line="277" column="8" selection-start="13387" selection-end="13387" vertical-scroll-proportion="0.31585082" />
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/twitter4j-core/twitter4j-core-3.0.3-sources.jar!/twitter4j/auth/OAuthSupport.java">
@@ -572,56 +526,94 @@
         <state line="6" column="0" selection-start="162" selection-end="162" vertical-scroll-proportion="0.10332951" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="21" selection-start="41" selection-end="41" vertical-scroll-proportion="0.017221585" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/ScalaPluginExtension/src/com/troidworks/bukkit/favEx/scalaPluginExtension/ScalaPluginExtension.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="0" selection-start="511" selection-end="511" vertical-scroll-proportion="0.30998853">
+        <state line="14" column="79" selection-start="441" selection-end="441" vertical-scroll-proportion="0.25547445">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/config.yml">
+    <entry file="jar://$PROJECT_DIR$/lib/bukkit-1.4.7-R1.1-20130206.060129-4.jar!/org/bukkit/permissions/ServerOperator.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="21" selection-start="41" selection-end="41" vertical-scroll-proportion="0.017221585">
+        <state line="6" column="17" selection-start="169" selection-end="169" vertical-scroll-proportion="0.09259259">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/bukkit-1.4.7-R1.1-20130206.060129-4.jar!/org/bukkit/OfflinePlayer.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="91" selection-start="231" selection-end="231" vertical-scroll-proportion="0.09410289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/bukkit-1.4.7-R1.1-20130206.060129-4.jar!/org/bukkit/entity/HumanEntity.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="66" selection-start="213" selection-end="213" vertical-scroll-proportion="0.09410289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/bukkit-1.4.7-R1.1-20130206.060129-4.jar!/org/bukkit/entity/Player.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="57" selection-start="204" selection-end="204" vertical-scroll-proportion="0.09410289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/bukkit-1.4.7-R1.1-20130206.060129-4.jar!/org/bukkit/event/player/PlayerEvent.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="36" selection-start="468" selection-end="468" vertical-scroll-proportion="0.22222222">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/lib/bukkit-1.4.7-R1.1-20130206.060129-4.jar!/org/bukkit/command/CommandSender.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="9" selection-start="233" selection-end="233" vertical-scroll-proportion="0.17274472">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/plugin.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="61" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0">
+        <state line="3" column="8" selection-start="73" selection-end="73" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/EventHandlers.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="33" selection-start="595" selection-end="595" vertical-scroll-proportion="0.0">
+        <state line="13" column="45" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/FavoriteWatcher.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="70" selection-start="857" selection-end="857" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/FavEx.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="115" column="49" selection-start="3523" selection-end="3523" vertical-scroll-proportion="0.0">
+        <state line="21" column="2" selection-start="518" selection-end="518" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/Authorizer.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="36" selection-start="2116" selection-end="2116" vertical-scroll-proportion="0.5522388">
-          <folding>
-            <element signature="e#37#62#0" expanded="true" />
-          </folding>
+        <state line="33" column="21" selection-start="1115" selection-end="1115" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/troidworks/bukkit/favEx/FavEx.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="0" selection-start="78" selection-end="78" vertical-scroll-proportion="0.05344418">
+          <folding />
         </state>
       </provider>
     </entry>
